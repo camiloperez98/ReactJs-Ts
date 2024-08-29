@@ -1,0 +1,31 @@
+/* FormField.css */
+.form-group {
+    margin-bottom: 1rem; /* Espaciado entre campos del formulario */
+  }
+  
+  .form-group label {
+    display: block; /* Asegura que la etiqueta ocupe toda la línea */
+    margin-bottom: 0.5rem; /* Espaciado entre etiqueta y campo */
+    font-weight: bold; /* Etiqueta en negrita */
+    color: #333; /* Color de texto de la etiqueta */
+  }
+  
+  .form-group input {
+    width: 100%; /* Input ocupa el 100% del contenedor */
+    padding: 0.75rem; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    transition: border-color 0.3s ease; /* Suaviza la transición del color del borde */
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff; /* Color del borde cuando el campo está enfocado */
+    outline: none; /* Elimina el borde predeterminado del enfoque */
+  }
+  
+  .form-group input::placeholder {
+    color: #6c757d; /* Color del texto del placeholder */
+  }
+  
