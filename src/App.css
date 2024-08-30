@@ -2,4 +2,9 @@
 .content {
     padding: 2rem;
   }
+
+.container-app{
+  display: flex;
+  flex-direction: column;
+}
   

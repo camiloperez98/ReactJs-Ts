@@ -38,7 +38,7 @@ function Form(props: Props) {
       {title && <h2 className="form-title">{title}</h2>} {/* Renderiza el título si se proporciona. */}
       {children} {/* Renderiza los hijos pasados al componente Form. */}
       <div className="form-buttons">
-        <button type="submit">{submitText}</button> {/* Botón para enviar el formulario con texto personalizado. */}
+        <button  type="submit">{submitText}</button> {/* Botón para enviar el formulario con texto personalizado. */}
         {handleCancel && <button type="button" onClick={handleCancel}>{cancelText}</button>} {/* Botón de cancelar si se proporciona handleCancel. */}
       </div>
     </form>

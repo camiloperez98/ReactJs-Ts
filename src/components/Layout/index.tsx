@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import Sidebar from "../Sidebar/index";
+import Nabvar from "../Navbar/index";
 import Footer from "../Footer/index";
 import "./Layout.css";
 
@@ -9,10 +9,17 @@ type Props = {
     title?: string
 }
 
-function Layout({children, menuItems, title}: Props) {
+function Layout({children}: Props) {
+  const nabvarLinks = [
+    {name: 'Home', href: '/'},
+    {name: 'Clientes', href: '/clientes'},
+    {name: 'Ventas', href: '/ventas'},
+    {name: 'Usuarios', href: '/usuarios'},
+    {name: 'Envios', href: '/envios'},
+  ]
   return (
     <div className='layout'>
-        <Sidebar items={menuItems} title={title}/>
+      <Nabvar title="E-commerce" links={nabvarLinks}/>
         <div className='main-content'>
             {children}
         </div>
