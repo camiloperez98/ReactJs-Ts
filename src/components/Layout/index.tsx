@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react'
 import Nabvar from "../Navbar/index";
 import Footer from "../Footer/index";
-import "./Layout.css";
 
 type Props = {
     children: ReactNode;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import "./Menu.css";
 
 type Props = { links: { name: string; href: string }[] };
 
@@ -13,17 +12,17 @@ const Menu = ({ links }: Props) => {
   };
 
   return (
-    <div className="hamburguer-menu">
-      <button className="hamburguer-button" onClick={toggleMenu}>
+    <div className="">
+      <button className="" onClick={toggleMenu}>
         <FontAwesomeIcon icon={faBars} />
       </button>
       {isOpen && (
-        <ul className="hamburguer-links">
+        <ul className="">
           {links.map((link, index) => (
-            <li key={index} className="hamburguer-item">
+            <li key={index} className="">
               <a
                 href={link.href}
-                className="hamburguer-link"
+                className=""
                 onClick={toggleMenu}
               >
                 {link.name}

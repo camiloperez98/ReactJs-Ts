@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./components/Layout/index";
-import "./App.css";
+
 import FormField from "./components/FormField/index";
 import Form from "./components/Form/index";
 
@@ -12,7 +12,7 @@ const menuItems = [
 ];
 
 const handleSubmit = (formData: Record<string, string>) => {
-  console.log("Form Data:", formData); 
+  console.log("Form Data:", formData);
 };
 
 const handleFormCancel = () => {
@@ -21,31 +21,35 @@ const handleFormCancel = () => {
 
 const App = () => {
   return (
-    <Layout menuItems={menuItems} title="E-commerce"> <br />
-      <div className="content">
-        <Form
-          handleSubmit={handleSubmit}
-          submitText="Guardar"
-          title="Nuevo Usuario"
-          cancelText="Cancelar"
-          handleCancel={handleFormCancel}
-        >
-          <FormField name="username" type="text" placeholder="Usuario" />
-          <FormField
-            name="password"
-            type="password"
-            placeholder="Contraseña"
-          />
-          <FormField
-            name="email"
-            type="email"
-            placeholder="Correo Electronico"
-          />
-          <FormField name="phone" type="tel" placeholder="Teléfono" />
-          <FormField name="address" type="text" placeholder="Dirección" />
-        </Form>
-      </div>
-    </Layout>
+    <div>
+      <Layout menuItems={menuItems} title="E-commerce">
+        {" "}
+        <br />
+        <div className="content">
+          <Form
+            handleSubmit={handleSubmit}
+            submitText="Guardar"
+            title="Nuevo Usuario"
+            cancelText="Cancelar"
+            handleCancel={handleFormCancel}
+          >
+            <FormField name="username" type="text" placeholder="Usuario" />
+            <FormField
+              name="password"
+              type="password"
+              placeholder="Contraseña"
+            />
+            <FormField
+              name="email"
+              type="email"
+              placeholder="Correo Electronico"
+            />
+            <FormField name="phone" type="tel" placeholder="Teléfono" />
+            <FormField name="address" type="text" placeholder="Dirección" />
+          </Form>
+        </div>
+      </Layout>
+    </div>
   );
 };
 

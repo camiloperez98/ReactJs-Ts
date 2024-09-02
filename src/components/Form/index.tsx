@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import "./Form.css"; 
 
 type Props = {
   children: ReactNode; // Los componentes hijos que serán renderizados dentro del formulario.

@@ -1,5 +1,4 @@
 import React from "react";
-import './FormField.css'; // Asegúrate de que la ruta sea correcta
 
 // Interface Props define las propiedades que el componente FormField espera recibir.
 type Props = {

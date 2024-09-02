@@ -8,9 +8,9 @@ type Props = {
 
 const Navbar = ({ title, links }: Props) => {
   return (
-    <nav className="navbar">
+    <nav className="flex justify-content: flex-start">
       <Menu links={links} />
-      <div className="navbar-brand">{title}</div>
+      <div className="">{title}</div>
     </nav>
   );
 };

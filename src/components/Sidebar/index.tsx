@@ -1,5 +1,4 @@
 import React from "react";
-import "./Sidebar.css"; // Asegúrate de que la ruta sea correcta
 
 interface Props {
   items: Array<{ label: string; href: string }>; // Array de objetos para los elementos del menú
