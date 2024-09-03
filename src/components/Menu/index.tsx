@@ -12,17 +12,23 @@ const Menu = ({ links }: Props) => {
   };
 
   return (
-    <div className="">
-      <button className="" onClick={toggleMenu}>
-        <FontAwesomeIcon icon={faBars} />
+    <div className="relative">
+      <button onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faBars} size="2x" />
       </button>
       {isOpen && (
-        <ul className="">
+        <ul className="py-6">
           {links.map((link, index) => (
-            <li key={index} className="">
+            <li
+              key={index}
+              className="text-current
+                        text-xl italic 
+                        font-mono
+                        "
+            >
               <a
                 href={link.href}
-                className=""
+                className="hover:text-blue-500"
                 onClick={toggleMenu}
               >
                 {link.name}
