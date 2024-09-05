@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+
+import { IoMdMenu, IoMdClose } from "react-icons/io"; 
 
 type Props = { links: { name: string; href: string }[] };
 
@@ -19,7 +21,8 @@ const Menu = ({ links }: Props) => {
                   hover:text-blue-500 
                   transition-colors duration-300"
       >
-        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
+        {/* <FontAwesomeIcon icon={isOpen ? faTimes : faBars} /> */}
+        {isOpen ? <IoMdClose /> : <IoMdMenu />}
       </button>
       {isOpen && (
         <ul
