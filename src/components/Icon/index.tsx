@@ -1,14 +1,14 @@
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { ReactElement, useState } from "react";
 
 type Props = {
-  icon: IconProp;
+  icon: ReactElement;
   onClick?: () =>void;
   elementCount?: number;
+  size?: string
 };
 
-const Icon = ({ icon, onClick, elementCount }: Props) => {
+const Icon = ({ icon, onClick, elementCount, size }: Props) => {
   const [show, setShow] = useState(false);
 
   const showElements = () => {
@@ -16,7 +16,9 @@ const Icon = ({ icon, onClick, elementCount }: Props) => {
     if (onClick) onClick();
   };
   return <div onClick={showElements}>
-    <FontAwesomeIcon icon={icon} size="lg"/>
+    <div className={`${size}`}>
+    {icon}
+    </div>
     {elementCount !== undefined && elementCount > 0 && (
       <span>
         {elementCount}

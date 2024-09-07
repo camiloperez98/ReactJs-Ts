@@ -7,6 +7,10 @@ import {
   faUserAlt,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import { IoSearch, } from "react-icons/io5";
+import { FaRegHeart, FaUserCircle } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
+
 
 type Props = {
   title: string;
@@ -27,14 +31,19 @@ const Navbar = ({ title, links }: Props) => {
                 bg-gradient-to-t from-white to-gray-200 
                 shadow shadow-gray-500/40"
     >
-      <div className="flex items-center">
-        <Menu links={links} />
+      <div className="flex items-center
+                      justify-between">
+                        
+        <div className="flex items-center">
+          <Menu links={links} />
+        </div>
 
         <div
           className="ml-24
                     text-slate-800 
                     text-2xl italic 
                     font-mono
+                    hover:text-blue-500 
                     absolute"
         >
           <a href="/">{title}</a>
@@ -48,7 +57,8 @@ const Navbar = ({ title, links }: Props) => {
                     transition-colors duration-300"
         >
           <Icon
-            icon={faSearch}
+            size="text-2xl"
+            icon={<IoSearch />}
             onClick={() => console.log("Add to favorite")}
           />
         </button>
@@ -59,8 +69,8 @@ const Navbar = ({ title, links }: Props) => {
                           transition-colors duration-300"
         >
           <Icon
-            icon={faHeart}
-            elementCount={1}
+            size="text-2xl"
+            icon={<FaRegHeart />}
             onClick={() => console.log("Add to favorite")}
           />
         </button>
@@ -71,8 +81,8 @@ const Navbar = ({ title, links }: Props) => {
                           transition-colors duration-300"
         >
           <Icon
-            icon={faShoppingCart}
-            elementCount={1}
+            size="text-2xl"
+            icon={<MdOutlineShoppingCart />}
             onClick={() => console.log("Add to cart")}
           />
         </button>
@@ -83,7 +93,8 @@ const Navbar = ({ title, links }: Props) => {
                           transition-colors duration-300"
         >
           <Icon
-            icon={faUserAlt}
+            size="text-2xl"
+            icon={<FaUserCircle />}
             onClick={() => console.log("Add to favorite")}
           />
         </button>

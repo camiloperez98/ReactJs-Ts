@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import { IoMdMenu, IoMdClose } from "react-icons/io"; 
+import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 type Props = { links: { name: string; href: string }[] };
 
@@ -17,7 +17,7 @@ const Menu = ({ links }: Props) => {
     <div className="relative">
       <button
         onClick={toggleMenu}
-        className="text-2xl
+        className="text-3xl
                   hover:text-blue-500 
                   transition-colors duration-300"
       >
