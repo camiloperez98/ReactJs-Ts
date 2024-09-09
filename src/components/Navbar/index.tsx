@@ -1,13 +1,7 @@
 import React from "react";
 import Menu from "../Menu/index";
 import Icon from "../Icon/index";
-import {
-  faShoppingCart,
-  faHeart,
-  faUserAlt,
-  faSearch,
-} from "@fortawesome/free-solid-svg-icons";
-import { IoSearch, } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
 import { FaRegHeart, FaUserCircle } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
@@ -31,10 +25,15 @@ const Navbar = ({ title, links }: Props) => {
                 bg-gradient-to-t from-white to-gray-200 
                 shadow shadow-gray-500/40"
     >
-      <div className="flex items-center
-                      justify-between">
-                        
-        <div className="flex items-center">
+      <div
+        className="flex items-center
+                      justify-between"
+      >
+        <div
+          className="flex items-center
+                      justify-center
+                      mt-2"
+        >
           <Menu links={links} />
         </div>
 
@@ -54,7 +53,10 @@ const Navbar = ({ title, links }: Props) => {
         <button
           className="ml-24
                     hover:text-blue-500 
-                    transition-colors duration-300"
+                    transition-colors duration-300
+                    hover:bg-neutral-200
+                    p-2
+                    rounded-full"
         >
           <Icon
             size="text-2xl"
@@ -66,7 +68,10 @@ const Navbar = ({ title, links }: Props) => {
         <button
           className="ml-24
                           hover:text-blue-500 
-                          transition-colors duration-300"
+                          transition-colors duration-300
+                          hover:bg-neutral-200
+                          p-2
+                          rounded-full"
         >
           <Icon
             size="text-2xl"
@@ -78,7 +83,10 @@ const Navbar = ({ title, links }: Props) => {
         <button
           className="ml-24
                           hover:text-blue-500 
-                          transition-colors duration-300"
+                          transition-colors duration-300
+                          hover:bg-neutral-200
+                          p-2
+                          rounded-full"
         >
           <Icon
             size="text-2xl"
@@ -90,7 +98,10 @@ const Navbar = ({ title, links }: Props) => {
         <button
           className="ml-24
                           hover:text-blue-500 
-                          transition-colors duration-300"
+                          transition-colors duration-300
+                          hover:bg-neutral-200
+                          p-2
+                          rounded-full"
         >
           <Icon
             size="text-2xl"
