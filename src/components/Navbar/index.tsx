@@ -1,10 +1,11 @@
-import React from "react";
+// import React from "react";
 import Menu from "../Menu/index";
 import Icon from "../Icon/index";
 import { IoSearch } from "react-icons/io5";
 import { FaRegHeart, FaUserCircle } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
-
+import  SearchBar from "../Search/index";
+import IconButton from "../IconButton/index";
 
 type Props = {
   title: string;
@@ -58,11 +59,9 @@ const Navbar = ({ title, links }: Props) => {
                     p-2
                     rounded-full"
         >
-          <Icon
-            size="text-2xl"
-            icon={<IoSearch />}
-            onClick={() => console.log("Add to favorite")}
-          />
+          <IconButton icon={<IoSearch />} size="text-2xl">
+            <SearchBar onSearch={()=> console.log('buscando')} placeholder="Buscar cliente"/>
+          </IconButton>
         </button>
 
         <button
@@ -115,55 +114,3 @@ const Navbar = ({ title, links }: Props) => {
 };
 
 export default Navbar;
-
-// import React from "react";
-// import Menu from "../Menu/index";
-// import Icon from "../Icon/index";
-// import { faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
-
-// type Props = {
-//   title: string;
-//   links: { name: string; href: string }[];
-// };
-
-// const Navbar = ({ title, links }: Props) => {
-//   return (
-//     <>
-//       <nav
-//         className="relative
-//                 flex justify-start
-//                 items-center
-//                 px-12
-//                 pl-24
-//                 py-6
-//                 drop-shadow-md
-//                 bg-gradient-to-t from-white to-gray-200
-//                 shadow shadow-gray-500/40"
-//       >
-//         <div className="">
-//           <Menu links={links} />
-//         </div>
-//         <div
-//           className="ml-24
-//                   text-slate-800
-//                   text-2xl italic
-//                   font-mono
-
-//                   absolute"
-//         >
-//           <a href="/">{title}</a>
-//         </div>
-//         <div className="flex justify-end">
-//           <Icon
-//             icon={faShoppingCart}
-//             elementCount={5}
-//             onClick={() => console.log("Add to cart")}
-//           />
-//           <Icon icon={faHeart} onClick={() => console.log("Add to favorite")} />
-//         </div>
-//       </nav>
-//     </>
-//   );
-// };
-
-// export default Navbar;

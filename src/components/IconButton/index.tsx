@@ -1,11 +1,12 @@
 import React, { ReactElement, useState } from "react";
+// import {useNavigate} from 'react-router-dom';
 
 type Props = {
   icon: ReactElement;
   onClick?: () => void;
   elementCount?: number;
   size?: string;
-  children: ReactElement | null;
+  children: ReactElement | ReactElement[];
 };
 
 const IconButton = ({ icon, onClick, elementCount, size, children }: Props) => {
@@ -17,38 +18,35 @@ const IconButton = ({ icon, onClick, elementCount, size, children }: Props) => {
   };
 
   return (
-    <div className="relative" onClick={toogleShow}>
-      <div className={`${size} relative`}>
-        {icon}
-        {elementCount !== undefined && elementCount > 0 && (
-          <span
-            className="absolute
-                            top-0
-                            right-0
-                            bg-red-500
-                            text-white
-                            rounded-full
-                            text-xs
-                            h-5
-                            w-5
-                            flex items-center
-                            justify-center
-                            "
-          >
-            {elementCount}
-          </span>
-        )}
-      </div>
+    <div
+      onClick={toogleShow}
+
+    >
+      <div className={`${size}`}>{icon}</div>
+
+      {elementCount !== undefined && elementCount > 0 && (
+        <span
+          className="absolute 
+                        top-0 
+                        right-0 
+                        text-xs 
+                        bg-red-500 
+                        text-white 
+                        rounded-full 
+                        p-1"
+        >
+          {elementCount}
+        </span>
+      )}
+
       {show && (
         <div
-          className="absolute
-                      top-full
-                      left-0
-                      mt-2
-                      bg.white
-                      shadow-lg
-                      p-4
-                      z10"
+          className="absolute 
+                      top-full 
+                      left-0 
+                      bg-white 
+                      shadow-md 
+                      p-4"
         >
           {children}
         </div>

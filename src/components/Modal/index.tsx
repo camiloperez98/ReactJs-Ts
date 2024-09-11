@@ -1,34 +1,25 @@
 import React from "react";
 
 type Props = {
-  onClose: () => void;
   children: React.ReactNode;
+  show: boolean;
+  onClose: () => void;
 };
 
-const Modal = ({ onClose, children }: Props) => {
+const Modal = ({ children, show, onClose }: Props) => {
+  if (!show) return null;
   return (
-    <div
-      className="fixed inset-0 
-                flex items-center 
-                justify-center 
-                bg-gray-800 
-                bg-opacity-50"
-    >
-      <div
-        className="bg-white 
-                    p-4 rounded 
-                    shadow-lg"
-      >
+    <div>
+      <div>
         <button
+          className="text-red-500
+                          font-bold
+                          mb-2"
           onClick={onClose}
-          className="absolute 
-                    top-2 right-2 
-                    text-gray-500 
-                    hover:text-gray-700"
         >
-          &times;
+          X
         </button>
-        {children}
+        <div>{children}</div>
       </div>
     </div>
   );
