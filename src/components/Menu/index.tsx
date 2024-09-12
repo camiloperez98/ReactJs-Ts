@@ -17,7 +17,7 @@ const Menu = ({ links }: Props) => {
     <div className="relative">
       <button
         onClick={toggleMenu}
-        className="text-2xl
+        className="text-3xl
                   hover:text-blue-500 
                   transition-colors duration-300"
       >

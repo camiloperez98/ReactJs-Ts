@@ -1,49 +1,31 @@
 import React, { useState } from "react";
+import Icon from "../Icon/index";
+import { FaSearch } from "react-icons/fa";
 
 type Props = {
-  placeholder?: string;
-  onSearch: (query: string) => void;
+  onSearch: (query: string) => void; // Función para manejar la búsqueda
 };
 
-const Search = ({ placeholder = "Search...", onSearch }: Props) => {
-  const [searchQuery, setSearchQuery] = useState("");
+const Search = ({ onSearch }: Props) => {
+  const [query, setQuery] = useState(""); // Estado para almacenar el texto de búsqueda
 
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
-  };
-
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    onSearch(searchQuery);
+  const handleSearch = () => {
+    onSearch(query); // Ejecuta la función de búsqueda cuando se activa el evento
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex 
-                items-center"
-    >
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={handleSearch}
-        placeholder={placeholder}
-        className="border border-gray-300 
-                p-2 
-                rounded"
-      />
-      <button
-        type="submit"
-        className="ml-2 
-                px-4 
-                py-2 
-                bg-blue-500 
-                text-white 
-                rounded"
-      >
-        Buscar
-      </button>
-    </form>
+    <div className="relative">
+      <Icon icon={<FaSearch />} size="text-xl">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)} // Actualiza el estado de la búsqueda
+          onKeyDown={(e) => e.key === "Enter" && handleSearch()} // Ejecuta la búsqueda al presionar Enter
+          placeholder="Search..."
+          className="border border-gray-300 p-1 rounded-md absolute top-full left-0 mt-2"
+        />
+      </Icon>
+    </div>
   );
 };
 

@@ -1,14 +1,15 @@
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { ReactElement, useState } from "react";
+import React, {ReactElement, useState } from "react";
 
 type Props = {
   icon: ReactElement;
   onClick?: () =>void;
   elementCount?: number;
-  size?: string
+  size?: string;
+  children: ReactElement;
 };
 
-const Icon = ({ icon, onClick, elementCount, size }: Props) => {
+const Icon = ({ icon, onClick, elementCount, size, children }: Props) => {
   const [show, setShow] = useState(false);
 
   const showElements = () => {
@@ -26,7 +27,7 @@ const Icon = ({ icon, onClick, elementCount, size }: Props) => {
     )}
     {show && (
       <div>
-
+        {children}
       </div>
     )}
   </div>
