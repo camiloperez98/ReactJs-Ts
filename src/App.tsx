@@ -12,8 +12,12 @@ const App = () => {
   return (
     <div className="">
       <Layout menuItems={menuItems} title="E-commerce">
-        <div className="w-full max-w-md mx-auto p-6">
-        </div>
+        <div
+          className="w-full 
+                      max-w-md 
+                      mx-auto 
+                      p-6"
+        ></div>
       </Layout>
     </div>
   );
