@@ -41,10 +41,9 @@ const Form = ({ fields, onSubmit, title, buttonText }: Props) => {
         <div
           key={field.name}
           className="flex
-                                        flex-col
-                                        mb-4"
+                    flex-col
+                    mb-4"
         >
-          
           <input
             className="peer
                     h-12
@@ -62,15 +61,15 @@ const Form = ({ fields, onSubmit, title, buttonText }: Props) => {
           <label
             htmlFor={field.name}
             className="text-md
-          absolute
-          ml-4
-          mt-2
-          text-gray-500
-          peer-focus:text-xs
-          peer-focus:mt-[5px] 
-          peer-focus:ml-[10px]
-          peer-focus:text-gray-700
-          "
+                    absolute
+                    ml-4
+                    mt-2
+                    text-gray-500
+                    peer-focus:text-xs
+                    peer-focus:mt-[5px] 
+                    peer-focus:ml-[10px]
+                    peer-focus:text-gray-700
+                    "
           >
             {field.name}
           </label>
