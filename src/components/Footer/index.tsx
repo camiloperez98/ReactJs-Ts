@@ -5,7 +5,11 @@ const Footer = () => {
     <footer
       className="p-6 
                     drop-shadow-md 
-                    bg-gradient-to-t from-white to-gray-200"
+                    bg-gradient-to-t from-white to-gray-200
+                    relative
+                    bottom-0
+                    right-0
+                    left-0"
     >
       <p className="text-center">&copy; ReactJs @2024.</p>
     </footer>

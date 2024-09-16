@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Nabvar from "../Navbar/index";
-// import Footer from "../Footer/index";
+import Footer from "../Footer/index";
 
 type Props = {
   children: ReactNode;
@@ -20,7 +20,7 @@ function Layout({ children }: Props) {
     <>
       <Nabvar title="E-commerce" links={nabvarLinks} />
       <div className="px-8">{children}</div>
-      {/* <Footer /> */}
+      <Footer/>
     </>
   );
 }
