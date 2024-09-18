@@ -17,7 +17,7 @@ const Icon = ({ icon, onClick, elementCount, size, children }: Props) => {
   };
   return (
     <div onClick={showElements}>
-      <div className={`${size}`}>{icon}</div>
+      <div className={`${size}` }>{icon}</div>
       {elementCount !== undefined && elementCount > 0 && (
         <span>{elementCount}</span>
       )}

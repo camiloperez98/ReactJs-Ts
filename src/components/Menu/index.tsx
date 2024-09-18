@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-
-import { IoMdMenu, IoMdClose } from "react-icons/io"; 
+import { RiMenuFold4Line, RiMenuFold3Line2   } from "react-icons/ri";
 
 type Props = { links: { name: string; href: string }[] };
 
@@ -17,12 +14,13 @@ const Menu = ({ links }: Props) => {
     <div className="relative">
       <button
         onClick={toggleMenu}
-        className="text-3xl
+        className="text-[1.70rem]
+                  text-gray-700
                   hover:text-blue-500 
-                  transition-colors duration-300"
+                  transition-colors 
+                  duration-300"
       >
-        {/* <FontAwesomeIcon icon={isOpen ? faTimes : faBars} /> */}
-        {isOpen ? <IoMdClose /> : <IoMdMenu />}
+        {isOpen ? <RiMenuFold3Line2  /> : <RiMenuFold4Line  />}
       </button>
       {isOpen && (
         <ul
@@ -39,8 +37,7 @@ const Menu = ({ links }: Props) => {
           {links.map((link, index) => (
             <li
               key={index}
-              className="text-current
-                        italic 
+              className="text-current 
                         font-mono
                         px-4
                         py-1

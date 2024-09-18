@@ -34,7 +34,7 @@ const Navbar = ({ title, links }: Props) => {
                 px-12
                 pl-24
                 pr-24
-                py-6
+                py-4
                 drop-shadow-md 
                 bg-gradient-to-t from-white to-gray-200 
                 shadow shadow-gray-500/40"
@@ -53,7 +53,7 @@ const Navbar = ({ title, links }: Props) => {
 
         <div
           className="ml-24
-                    text-slate-800 
+                    text-gray-700 
                     text-2xl italic 
                     font-mono
                     hover:text-blue-500 
@@ -105,7 +105,8 @@ const Navbar = ({ title, links }: Props) => {
         <button
           className="ml-24
                           hover:text-blue-500 
-                          transition-colors duration-300
+                          transition-colors 
+                          duration-300
                           hover:bg-neutral-200
                           p-2
                           rounded-full"
