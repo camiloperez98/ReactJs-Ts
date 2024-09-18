@@ -1,7 +1,15 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Layout from "./components/Layout/index";
+
+import AuthLayout from './components/Layout/AuthLayout'
+import Login from "./page/login/Login";
+import ForgetPassword from "./page/login/ForgetPassword";
+import Error404 from "./page/404/Error404";
+
 import Form from "./components/Form/index";
 import { FieldValues } from "react-hook-form";
+
 
 const menuItems = [
   { label: "Inicio", href: "/" },
@@ -66,7 +74,67 @@ const App = () => {
     console.log("Datos enviados", data);
   };
   return (
-    <div>
+
+    <>
+      <BrowserRouter>
+        <Routes>
+
+
+
+
+          {/* Index  */}
+          <Route path="/" element={
+            <Layout menuItems={menuItems} title="E-commerce">
+              <div
+                className="w-full 
+                      max-w-md 
+                      mx-auto 
+                      p-8
+                      pt-16
+                      pb-64"
+              >
+                          <Form
+            fields={fields}
+            onSubmit={onSubmit}
+            title="Nuevo Registro"
+            buttonText="Guardar"
+          />
+                </div>
+            </Layout>} >
+            
+            
+
+            
+            
+            
+            
+          </Route>
+
+          {/* login */}
+          <Route path="/login" element={<AuthLayout />}>
+            <Route index element={<Login />} />
+            <Route path="forget-pass" element={<ForgetPassword />} />
+          </Route>
+
+          {/* ruta no encontrada */}
+          <Route path="*" element={<Error404 />}/>
+
+        </Routes>
+      </BrowserRouter>
+
+      {/* <div className="">
+        <Layout menuItems={menuItems} title="E-commerce">
+          <div
+            className="w-full 
+                        max-w-md 
+                        mx-auto 
+                        p-6"
+          ></div>
+        </Layout>
+      </div> */}
+    </>
+
+<!--     <div>
       <Layout menuItems={menuItems} title="E-commerce">
         <div
           className="w-full 
@@ -84,7 +152,8 @@ const App = () => {
           />
         </div>
       </Layout>
-    </div>
+    </div> -->
+
   );
 };
 
