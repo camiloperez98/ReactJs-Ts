@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./components/Layout/index";
 // import Form from "./components/Form/index";
 // import { FieldValues } from "react-hook-form";
 // import FilterButtons from "./components/FilterButtons/index";
+// import { FieldValues } from "react-hook-form";
 import { fetchData } from "./apiFetch";
 import Card from "./components/Card/index";
+// import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Layout from "./components/Layout/index";
+// import AuthLayout from './components/Layout/AuthLayout'
+// import Login from "./page/login/Login";
+// import ForgetPassword from "./page/login/ForgetPassword";
+// import Error404 from "./page/404/Error404";
+// import Form from "./components/Form/index";
+
 const menuItems = [
   { label: "Inicio", href: "/" },
   { label: "Usuarios", href: "/users" },
@@ -97,7 +105,7 @@ const App = () => {
   //   console.log("Datos enviados", data);
   // };
   return (
-    <div>
+    <>
       <Layout menuItems={menuItems} title="E-commerce">
         <div
           className="w-full 
@@ -109,15 +117,15 @@ const App = () => {
             className="pl-[45px]
                 pr-[45px]"
           >
-           <div className="grid grid-cols-4 gap-4">
-           {productos.map((producto) => (
-              <Card
-                key={producto.id}
-                data={producto}
-                onClick={(id) => console.log(id)}
-              />
-            ))}
-           </div>
+            <div className="grid grid-cols-4 gap-4">
+              {productos.map((producto) => (
+                <Card
+                  key={producto.id}
+                  data={producto}
+                  onClick={(id) => console.log(id)}
+                />
+              ))}
+            </div>
           </div>
           {/* <Form
             fields={fields}
@@ -127,7 +135,7 @@ const App = () => {
           /> */}
         </div>
       </Layout>
-    </div>
+    </>
   );
 };
 
