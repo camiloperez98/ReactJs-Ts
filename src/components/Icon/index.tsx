@@ -5,7 +5,7 @@ type Props = {
   onClick?: () => void;
   elementCount?: number;
   size?: string;
-  children: ReactElement;
+  children?: ReactElement;
 };
 
 const Icon = ({ icon, onClick, elementCount, size, children }: Props) => {
