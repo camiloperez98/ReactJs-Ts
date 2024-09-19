@@ -11,8 +11,6 @@ type CardData = {
     rate: number;
     count: number;
   };
-  phone?: string;
-  email?: string;
 };
 
 type Props = {
@@ -22,18 +20,60 @@ type Props = {
 
 const Card = ({ data, onClick }: Props) => {
   return (
-    <div className="" onClick={() => onClick?.(data.id)}>
+    <div
+      className="border-2
+                  mt-4
+                  border-gray-300
+                  p-4
+                  rounded-3xl
+                  flex
+                  flex-col
+                  items-center
+                  justify-center
+                  hover:shadow-lg
+                  transition-all
+
+                  "
+      onClick={() => onClick?.(data.id)}
+    >
       {data.image && (
-        <img src={data.image} alt={data.title} className="w-full h-48 object-cover rounded-md mb-4" />
+        <img
+          src={data.image}
+          alt={data.title}
+          className="w-36 
+                    h-36
+                    pb-4"
+        />
       )}
-      <h2>{data.title}</h2>
-      {/* {data.description && <p>{data.description}</p>} */}
-      {data.category && <p>{data.category}</p>}
-      {data.price && <p>{data.price}</p>}
-      {data.rating?.count && <p>{data.rating?.count}</p>}
-      {data.rating?.rate && <p>{data.rating?.rate}</p>}
-      {data.phone && <p>{data.phone}</p>}
-      {data.email && <p>{data.email}</p>}
+      <h2
+        className="text-sm 
+                  font-mono
+                  font-bold
+                  text-center"
+      >
+        {data.title}
+      </h2>
+      {/* {data.category && (
+        <p className="text-sm text-gray-500">{data.category}</p>
+      )} */}
+      {data.price && (
+        <p
+          className="text-xl 
+                      font-mono 
+                      text-green-500"
+        >
+          ${data.price}
+        </p>
+      )}
+      {data.rating?.rate && (
+        <p
+          className="text-sm 
+                      text-yellow-500
+                      font-mono"
+        >
+          {data.rating.count} Und. disponibles
+        </p>
+      )}
     </div>
   );
 };

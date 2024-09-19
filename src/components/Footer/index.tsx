@@ -12,7 +12,7 @@ const Footer = () => {
                 left-0"
     >
       <p className="text-center
-      font-mono">&copy; ReactJs @2024.</p>
+      font-mono">&copy; E-commerce @2024.</p>
     </footer>
   );
 };

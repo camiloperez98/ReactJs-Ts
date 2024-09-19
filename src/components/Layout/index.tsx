@@ -1,8 +1,5 @@
 import React, { ReactNode } from "react";
 import Nabvar from "../Navbar/index";
-
-import AuthLayout from "./AuthLayout";
-
 import Footer from "../Footer/index";
 
 
