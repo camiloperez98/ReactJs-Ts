@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { RiMenuFold4Line, RiMenuFold3Line2 } from "react-icons/ri";
 
 type Props = { links: { name: string; href: string }[] };

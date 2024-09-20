@@ -17,21 +17,20 @@ const App = () => {
     <BrowserRouter>
       <Layout menuItems={menuItems} title="E-commerce">
         <div
-          className="w-full 
-                      mx-auto 
+          className="w-full
                       pt-4 
-                      pb-[372px]"
+                      pb-[372px]
+                      bg-slate-100
+                      "
         >
           <div
             className="pl-[45px] 
-                        pr-[45px]"
-          >
-          </div>
+                      pr-[45px]"
+          ></div>
           <Routes>
             <Route path="/" element={<h1>Bienvenido a la tienda</h1>} />
             <Route path="/products" element={<ProductList />} />
-            <Route path="*" element={<Error404 />} />{" "}
-            {/* Para manejar rutas no existentes */}
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </div>
       </Layout>

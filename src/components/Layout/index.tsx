@@ -20,7 +20,7 @@ function Layout({ children }: Props) {
   return (
     <>
       <Nabvar title="E-commerce" links={nabvarLinks} />
-      <div className="px-8">{children}</div>
+      <div className="">{children}</div>
 
 
       <Footer/>

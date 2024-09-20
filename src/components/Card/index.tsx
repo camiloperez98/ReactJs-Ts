@@ -23,9 +23,10 @@ const Card = ({ data, onClick }: Props) => {
     <div
       className="border-[1px]
                   mt-4
-                  -mr-[12px]
-                  -mb-[28px]
-                  border-gray-300
+                  w-[250px]
+                  mr-[1px]
+                  -mb-[16px]
+                  border-slate-200
                   p-4
                   rounded-2xl
                   flex
@@ -34,7 +35,7 @@ const Card = ({ data, onClick }: Props) => {
                   justify-center
                   hover:shadow-lg
                   transition-all
-                  "
+                  bg-white"
       onClick={() => onClick?.(data.id)}
     >
       {data.image && (
@@ -66,7 +67,7 @@ const Card = ({ data, onClick }: Props) => {
           ${data.price}
         </p>
       )}
-      {data.rating?.rate && (
+      {/* {data.rating?.rate && (
         <p
           className="text-sm 
                       text-yellow-500
@@ -74,7 +75,7 @@ const Card = ({ data, onClick }: Props) => {
         >
           {data.rating.count} Und. disponibles
         </p>
-      )}
+      )} */}
     </div>
   );
 };

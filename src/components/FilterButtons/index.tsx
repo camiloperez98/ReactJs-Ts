@@ -40,18 +40,16 @@ const FilterButtons = ({ products, productsCategory, onFilter }: Props) => {
       className="flex 
                     justify-between 
                     pb-4
-                    pl-[50px]
-                    pr-[50px]"
+                    pl-[40px]
+                    pr-[40px]"
     >
       {productsCategory.map((itemCategory) => (
         <button
           key={itemCategory.key}
           onClick={() => filterProduct(itemCategory.key)}
           className={`bg-gray-100 
-                    hover:bg-yellow-200 
                     text-black 
                     font-mono 
-                    hover:text-gray-700 
                     py-1 
                     px-4 
                     border-[1px] 
@@ -59,11 +57,11 @@ const FilterButtons = ({ products, productsCategory, onFilter }: Props) => {
                     transition-all 
                     duration-300   
                     rounded-full
-                    w-[170px] 
+                    w-[140px] 
             ${
               selectedCategory === itemCategory.key
-                ? "bg-yellow-200 text-gray-700"
-                : "bg-gray-100 hover:bg-yellow-200 text-black hover:text-gray-700"
+                ? "bg-gray-500 text-white"
+                : "bg-white hover:bg-gray-500 text-black hover:text-white"
             }`}
         >
           {itemCategory.label}

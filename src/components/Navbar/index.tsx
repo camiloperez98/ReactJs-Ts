@@ -32,8 +32,8 @@ const Navbar = ({ title, links }: Props) => {
                 flex justify-between
                 items-center
                 px-12
-                pl-24
-                pr-24
+                pl-[36px]
+                pr-[33px]
                 py-4
                 drop-shadow-md 
                 bg-gradient-to-t from-white to-gray-200 
@@ -46,7 +46,8 @@ const Navbar = ({ title, links }: Props) => {
         <div
           className="flex items-center
                       justify-center
-                      mt-2"
+                      mt-2
+                      mb-2"
         >
           <Menu links={links} />
         </div>
@@ -57,7 +58,8 @@ const Navbar = ({ title, links }: Props) => {
                     text-2xl italic 
                     font-mono
                     hover:text-blue-500 
-                    absolute"
+                    absolute
+                    "
         >
           <a href="/">{title}</a>
         </div>
@@ -127,11 +129,11 @@ const Navbar = ({ title, links }: Props) => {
 
         <button
           className="ml-24
-                          hover:text-blue-500 
-                          transition-colors duration-300
-                          hover:bg-neutral-200
-                          p-2
-                          rounded-full"
+                    hover:text-blue-500 
+                    transition-colors duration-300
+                    hover:bg-neutral-200
+                    p-2
+                    rounded-full"
         >
           <Icon
             size="text-2xl"

@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../../components/Card/index";
 import FilterButtons from "../../components/FilterButtons/index";
 import { fetchData } from "../../apiFetch"; // Fetch reutilizable para obtener datos de la API
 
 const categories = [
   { key: "All", label: "Todos" },
-  { key: "jewelery", label: "Joyería" },
-  { key: "electronics", label: "Electrónica" },
-  { key: "men's clothing", label: "Ropa de Hombre" },
-  { key: "women's clothing", label: "Ropa de Mujer" },
+  { key: "jewelery", label: "Joyas" },
+  { key: "electronics", label: "Tecnología" },
+  { key: "women's clothing", label: "Moda Mujer" },
+  { key: "men's clothing", label: "Moda Hombre" },
+  
 ];
 
 type Product = {
@@ -46,7 +47,7 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <FilterButtons
         products={products}
         productsCategory={categories}
@@ -54,12 +55,13 @@ const ProductList = () => {
       />
       <div
         className="flex
-                      justify-between"
+                  justify-between
+                  mr-[20px]"
       >
-        <div className="w-[550px]"></div>
-        <div
-          className="grid grid-cols-4 gap-4
-                    mr-[10px]"
+        <div className="w-[280px]"></div>
+
+        <div className="grid grid-cols-5 gap-4
+                    mr-[18px]"
         >
           {filteredProducts.map((product) => (
             <Card
@@ -78,7 +80,7 @@ const ProductList = () => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
