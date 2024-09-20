@@ -63,6 +63,7 @@ const ProductList = () => {
         >
           {filteredProducts.map((product) => (
             <Card
+              onClick={(id) => console.log("Producto seleccionado:", id)}
               key={product.id}
               data={{
                 id: product.id,
