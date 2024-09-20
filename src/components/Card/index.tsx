@@ -21,18 +21,19 @@ type Props = {
 const Card = ({ data, onClick }: Props) => {
   return (
     <div
-      className="border-2
+      className="border-[1px]
                   mt-4
+                  -mr-[12px]
+                  -mb-[28px]
                   border-gray-300
                   p-4
-                  rounded-3xl
+                  rounded-2xl
                   flex
                   flex-col
                   items-center
                   justify-center
                   hover:shadow-lg
                   transition-all
-
                   "
       onClick={() => onClick?.(data.id)}
     >

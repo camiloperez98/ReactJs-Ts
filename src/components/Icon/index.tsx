@@ -5,10 +5,18 @@ type Props = {
   onClick?: () => void;
   elementCount?: number;
   size?: string;
+  color?: string;
   children?: ReactElement;
 };
 
-const Icon = ({ icon, onClick, elementCount, size, children }: Props) => {
+const Icon = ({
+  icon,
+  onClick,
+  elementCount,
+  size,
+  color,
+  children,
+}: Props) => {
   const [show, setShow] = useState(false);
 
   const showElements = () => {
@@ -17,7 +25,7 @@ const Icon = ({ icon, onClick, elementCount, size, children }: Props) => {
   };
   return (
     <div onClick={showElements}>
-      <div className={`${size}` }>{icon}</div>
+      <div className={`${size} ${color}`}>{icon}</div>
       {elementCount !== undefined && elementCount > 0 && (
         <span>{elementCount}</span>
       )}

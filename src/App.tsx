@@ -16,9 +16,16 @@ const App = () => {
   return (
     <BrowserRouter>
       <Layout menuItems={menuItems} title="E-commerce">
-        <div className="w-full mx-auto pt-4 pb-[372px]">
-          <div className="pl-[45px] pr-[45px]">
-            <div className="grid grid-cols-4 gap-4"></div>
+        <div
+          className="w-full 
+                      mx-auto 
+                      pt-4 
+                      pb-[372px]"
+        >
+          <div
+            className="pl-[45px] 
+                        pr-[45px]"
+          >
           </div>
           <Routes>
             <Route path="/" element={<h1>Bienvenido a la tienda</h1>} />

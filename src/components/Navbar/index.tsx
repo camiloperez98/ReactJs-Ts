@@ -84,7 +84,12 @@ const Navbar = ({ title, links }: Props) => {
                     p-2
                     rounded-full"
         >
-          <Icon size="text-2xl" icon={<IoSearch />} onClick={toogleSearch} />
+          <Icon
+            size="text-2xl"
+            color="text-gray-700"
+            icon={<IoSearch />}
+            onClick={toogleSearch}
+          />
         </button>
 
         <button
@@ -97,6 +102,7 @@ const Navbar = ({ title, links }: Props) => {
         >
           <Icon
             size="text-2xl"
+            color="text-gray-700"
             icon={<FaRegHeart />}
             onClick={() => console.log("Add to favorite")}
           />
@@ -113,6 +119,7 @@ const Navbar = ({ title, links }: Props) => {
         >
           <Icon
             size="text-2xl"
+            color="text-gray-700"
             icon={<MdOutlineShoppingCart />}
             onClick={() => console.log("Add to cart")}
           />
@@ -128,6 +135,7 @@ const Navbar = ({ title, links }: Props) => {
         >
           <Icon
             size="text-2xl"
+            color="text-gray-700"
             icon={<FaUserCircle />}
             onClick={() => console.log("Add to favorite")}
           />

@@ -52,29 +52,31 @@ const ProductList = () => {
         productsCategory={categories}
         onFilter={setFilteredProducts}
       />
-      <div className="flex
-                      justify-between">
-                        <div className="w-[550px]">
-
-                        </div>
-      <div className="grid grid-cols-4 gap-4">
-        {filteredProducts.map((product) => (
-          <Card
-            key={product.id}
-            data={{
-              id: product.id,
-              title: product.title,
-              category: product.category,
-              image: product.image,
-              price: product.price,
-              description: product.description,
-              rating: product.rating,
-            }}
-          />
-        ))}
+      <div
+        className="flex
+                      justify-between"
+      >
+        <div className="w-[550px]"></div>
+        <div
+          className="grid grid-cols-4 gap-4
+                    mr-[10px]"
+        >
+          {filteredProducts.map((product) => (
+            <Card
+              key={product.id}
+              data={{
+                id: product.id,
+                title: product.title,
+                category: product.category,
+                image: product.image,
+                price: product.price,
+                description: product.description,
+                rating: product.rating,
+              }}
+            />
+          ))}
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 };

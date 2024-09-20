@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RiMenuFold4Line, RiMenuFold3Line2   } from "react-icons/ri";
+import { RiMenuFold4Line, RiMenuFold3Line2 } from "react-icons/ri";
 
 type Props = { links: { name: string; href: string }[] };
 
@@ -20,7 +20,7 @@ const Menu = ({ links }: Props) => {
                   transition-colors 
                   duration-300"
       >
-        {isOpen ? <RiMenuFold3Line2  /> : <RiMenuFold4Line  />}
+        {isOpen ? <RiMenuFold3Line2 /> : <RiMenuFold4Line />}
       </button>
       {isOpen && (
         <ul
