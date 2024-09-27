@@ -55,7 +55,7 @@ const FilterButtons = ({ products, productsCategory, onFilter }: Props) => {
                     border-[1px] 
                     border-gray-300 
                     transition-all 
-                    duration-300   
+                    duration-300
                     rounded-full
                     w-[140px] 
             ${
