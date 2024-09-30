@@ -27,123 +27,125 @@ const Navbar = ({ title, links }: Props) => {
   // };
 
   return (
-    <nav
-      className="relative
-                flex justify-between
-                items-center
-                px-12
-                pl-[36px]
-                pr-[33px]
-                py-4
-                drop-shadow-md 
-                bg-gradient-to-t from-white to-gray-200 
-                shadow shadow-gray-500/40"
-    >
-      <div
-        className="flex items-center
-                      justify-between"
+    <div className=" fixed w-full">
+      <nav
+        className="relative
+                  flex justify-between
+                  items-center
+                  px-12
+                  pl-[36px]
+                  pr-[33px]
+                  py-4
+                  drop-shadow-md 
+                  bg-gradient-to-t from-white to-gray-200 
+                  shadow shadow-gray-500/40"
       >
         <div
           className="flex items-center
-                      justify-center
-                      mt-2
-                      mb-2"
+                        justify-between"
         >
-          <Menu links={links} />
+          <div
+            className="flex items-center
+                        justify-center
+                        mt-2
+                        mb-2"
+          >
+            <Menu links={links} />
+          </div>
+
+          <div
+            className="ml-24
+                      text-gray-700 
+                      text-2xl italic 
+                      font-mono
+                      hover:text-blue-500 
+                      absolute
+                      "
+          >
+            <a href="/">{title}</a>
+          </div>
         </div>
 
-        <div
-          className="ml-24
-                    text-gray-700 
-                    text-2xl italic 
-                    font-mono
-                    hover:text-blue-500 
-                    absolute
-                    "
-        >
-          <a href="/">{title}</a>
-        </div>
-      </div>
-
-      <div className="flex items-center">
-        {showSearch && (
-          <input
-            type="text"
-            className="border border-gray-300 
-                      rounded-full 
+        <div className="flex items-center">
+          {showSearch && (
+            <input
+              type="text"
+              className="border border-gray-300 
+                        rounded-full 
+                        p-2
+                        w-[600px]
+                        -mr-36"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              placeholder="Buscar..."
+            />
+          )}
+          <button
+            className="ml-24
+                      hover:text-blue-500 
+                      transition-colors duration-300
                       p-2
-                      w-[600px]
-                      -mr-36"
-            value={searchQuery}
-            onChange={handleSearchChange}
-            placeholder="Buscar..."
-          />
-        )}
-        <button
-          className="ml-24
-                    hover:text-blue-500 
-                    transition-colors duration-300
-                    p-2
-                    rounded-full"
-        >
-          <Icon
-            size="text-2xl"
-            color="text-gray-700"
-            icon={<IoSearch />}
-            onClick={toogleSearch}
-          />
-        </button>
+                      rounded-full"
+          >
+            <Icon
+              size="text-2xl"
+              color="text-gray-700"
+              icon={<IoSearch />}
+              onClick={toogleSearch}
+            />
+          </button>
 
-        <button
-          className="ml-24
-                          hover:text-blue-500 
-                          transition-colors duration-300
-                          hover:bg-neutral-200
-                          p-2
-                          rounded-full"
-        >
-          <Icon
-            size="text-2xl"
-            color="text-gray-700"
-            icon={<FaRegHeart />}
-            onClick={() => console.log("Add to favorite")}
-          />
-        </button>
+          <button
+            className="ml-24
+                            hover:text-blue-500 
+                            transition-colors duration-300
+                            hover:bg-neutral-200
+                            p-2
+                            rounded-full"
+          >
+            <Icon
+              size="text-2xl"
+              color="text-gray-700"
+              icon={<FaRegHeart />}
+              onClick={() => console.log("Add to favorite")}
+            />
+          </button>
 
-        <button
-          className="ml-24
-                          hover:text-blue-500 
-                          transition-colors 
-                          duration-300
-                          hover:bg-neutral-200
-                          p-2
-                          rounded-full"
-        >
-          <Icon
-            size="text-2xl"
-            color="text-gray-700"
-            icon={<MdOutlineShoppingCart />}
-            onClick={() => console.log("Add to cart")}
-          />
-        </button>
+          <button
+            className="ml-24
+                            hover:text-blue-500 
+                            transition-colors 
+                            duration-300
+                            hover:bg-neutral-200
+                            p-2
+                            rounded-full"
+          >
+            <Icon
+              size="text-2xl"
+              color="text-gray-700"
+              icon={<MdOutlineShoppingCart />}
+              onClick={() => console.log("Add to cart")}
+            />
+          </button>
 
-        <button
-          className="ml-24
-                    hover:text-blue-500 
-                    transition-colors duration-300
-                    hover:bg-neutral-200
-                    p-2
-                    rounded-full"
-        >
-          <Icon
-            size="text-2xl"
-            color="text-gray-700"
-            icon={<FaUserCircle />}
-            onClick={() => console.log("Add to favorite")}
-          />
-        </button>
-      </div>
-    </nav>
+          <button
+            className="ml-24
+                      hover:text-blue-500 
+                      transition-colors duration-300
+                      hover:bg-neutral-200
+                      p-2
+                      rounded-full"
+          >
+            <Icon
+              size="text-2xl"
+              color="text-gray-700"
+              icon={<FaUserCircle />}
+              onClick={() => console.log("Add to favorite")}
+            />
+          </button>
+        </div>
+      </nav>
+    </div>
   );
 };
 

@@ -41,7 +41,10 @@ const FilterButtons = ({ products, productsCategory, onFilter }: Props) => {
                     justify-between 
                     pb-4
                     pl-[40px]
-                    pr-[40px]"
+                    pr-[40px]
+                    mt-20
+                    
+                    "
     >
       {productsCategory.map((itemCategory) => (
         <button

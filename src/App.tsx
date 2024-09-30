@@ -19,7 +19,7 @@ const App = () => {
         <div
           className="w-full
                       pt-4 
-                      pb-[372px]
+                      
                       bg-slate-100
                       "
         >

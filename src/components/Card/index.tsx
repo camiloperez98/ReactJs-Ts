@@ -22,12 +22,18 @@ const Card = ({ data, onClick }: Props) => {
   return (
     <div
       className="border-[1px]
-                  mt-4
-                  w-[250px]
-                  mr-[1px]
-                  -mb-[16px]
+                  
+                  w-auto 
+                  h-60
+                  py-44
+                  sm:py-44
+                  lg:py-36
+                  
+
+                  px-5
+                  
                   border-slate-200
-                  p-4
+                  
                   rounded-2xl
                   flex
                   flex-col
