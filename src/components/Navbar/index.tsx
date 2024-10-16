@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import Menu from "../Menu/index";
 import Icon from "../Icon/index";
 import { IoSearch } from "react-icons/io5";
 import { FaRegHeart, FaUserCircle } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-type Props = {
-  title: string;
-  links: { name: string; href: string }[];
-};
-
-const Navbar = ({ title, links }: Props) => {
+const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -32,40 +27,32 @@ const Navbar = ({ title, links }: Props) => {
                 flex justify-between
                 items-center
                 px-12
-                pl-[36px]
+                pl-[33px]
                 pr-[33px]
-                py-4
+                py-[5px]
                 drop-shadow-md 
                 bg-gradient-to-t from-white to-gray-200 
                 shadow shadow-gray-500/40"
     >
       <div
-        className="flex items-center
-                      justify-between"
-      >
-        {/* <div
-          className="flex items-center
-                      justify-center
-                      mt-2
-                      mb-2"
-        >
-          <Menu links={links} />
-        </div> */}
-
-        <div
-          className="ml-[2px]
+        className="
                     text-gray-700 
                     text-2xl italic 
                     font-mono
                     hover:text-blue-500 
-                    absolute
                     "
-        >
-          <a href="/">{title}</a>
-        </div>
+      >
+        <Link to="/">
+          <img className="h-[60px]" src="/src/assets/commerce.png" alt="" />
+        </Link>
       </div>
 
-      <div className="flex items-center">
+      <div
+        className="flex 
+                    items-center
+                    justify-between
+                    "
+      >
         {showSearch && (
           <input
             type="text"

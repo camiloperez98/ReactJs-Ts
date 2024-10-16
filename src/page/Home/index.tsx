@@ -1,14 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-type Props = {}
+// type Props = {}
 
 const rutes = [
     { name: "Usuarios", href: "/user" },
     { name: "Productos", href: "/products" },
     { name: "Ventas", href: "/sale" },
+    
 ];
 
-const Home = (props: Props) => {
+const Home = () => {
     return (
         <>
             <div className='flex 
@@ -29,7 +31,7 @@ const Home = (props: Props) => {
                     duration-300
                     rounded-full
                     w-[140px] '>
-                        <a href={rute.href}>{rute.name}</a>
+                        <Link to={rute.href}>{rute.name}</Link>
                     </button>
                 ))}
 
