@@ -43,17 +43,17 @@ const Navbar = ({ title, links }: Props) => {
         className="flex items-center
                       justify-between"
       >
-        <div
+        {/* <div
           className="flex items-center
                       justify-center
                       mt-2
                       mb-2"
         >
           <Menu links={links} />
-        </div>
+        </div> */}
 
         <div
-          className="ml-24
+          className="ml-[2px]
                     text-gray-700 
                     text-2xl italic 
                     font-mono

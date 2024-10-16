@@ -5,7 +5,7 @@ import Footer from "../Footer/index";
 
 type Props = {
   children: ReactNode;
-  menuItems: Array<{ label: string; href: string }>;
+  menuItems?: Array<{ label: string; href: string }>;
   title?: string;
 };
 

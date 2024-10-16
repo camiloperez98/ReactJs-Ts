@@ -1,21 +1,15 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/index";
-import ProductList from "./page/Products/index"; // Importa tu componente ProductList
-import Error404 from "./page/404/Error404"; // Puedes manejar errores 404
-// Otras importaciones...
+import { ProductRoute } from "./Routes/ProductRoute";
+import { HomeRoute } from "./Routes/HomeRoutes";
+import {UserRoute} from "./Routes/UserRoutes";
+import { Error404Route } from "./Routes/Error404Routes";
 
-const menuItems = [
-  { label: "Inicio", href: "/" },
-  { label: "Usuarios", href: "/users" },
-  { label: "Productos", href: "/products" },
-  { label: "Ventas", href: "/sale" },
-];
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Layout menuItems={menuItems} title="E-commerce">
+      <Layout title="E-commerce">
         <div
           className="w-full
                       pt-4 
@@ -28,9 +22,10 @@ const App = () => {
                       pr-[45px]"
           ></div>
           <Routes>
-            <Route path="/" element={<h1>Bienvenido a la tienda</h1>} />
-            <Route path="/products" element={<ProductList />} />
-            <Route path="*" element={<Error404 />} />
+            {HomeRoute()} 
+            {ProductRoute()}
+            {UserRoute()}
+            {Error404Route()}
           </Routes>
         </div>
       </Layout>
