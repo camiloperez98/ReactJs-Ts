@@ -41,7 +41,8 @@ const FilterButtons = ({ products, productsCategory, onFilter }: Props) => {
                     justify-between 
                     pb-4
                     pl-[40px]
-                    pr-[40px]"
+                    pr-[40px]
+                    mt-8"
     >
       {productsCategory.map((itemCategory) => (
         <button
@@ -60,8 +61,8 @@ const FilterButtons = ({ products, productsCategory, onFilter }: Props) => {
                     w-[140px] 
             ${
               selectedCategory === itemCategory.key
-                ? "bg-gray-500 text-white"
-                : "bg-white hover:bg-gray-500 text-black hover:text-white"
+                ? "bg-amber-400 text-gray-600"
+                : "bg-zinc-100 hover:bg-amber-400 text-black hover:text-gray-600"
             }`}
         >
           {itemCategory.label}

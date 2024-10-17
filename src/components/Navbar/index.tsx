@@ -32,7 +32,8 @@ const Navbar = () => {
                 py-[5px]
                 drop-shadow-md 
                 bg-gradient-to-t from-white to-gray-200 
-                shadow shadow-gray-500/40"
+                shadow shadow-gray-500/40
+                "
     >
       <div
         className="
@@ -77,7 +78,7 @@ const Navbar = () => {
         >
           <Icon
             size="text-2xl"
-            color="text-gray-700 group-hover:text-yellow-500"
+            color="text-gray-700 group-hover:text-black"
             icon={<IoSearch />}
             onClick={toogleSearch}
           />
@@ -94,7 +95,7 @@ const Navbar = () => {
         >
           <Icon
             size="text-2xl"
-            color="text-gray-700 group-hover:text-yellow-500" 
+            color="text-gray-700 group-hover:text-red-500" 
             icon={<FaRegHeart />}
             onClick={() => console.log("Add to favorite")}
           />
@@ -112,7 +113,7 @@ const Navbar = () => {
         >
           <Icon
             size="text-2xl"
-            color="text-gray-700 group-hover:text-yellow-500"
+            color="text-gray-700 group-hover:text-green-500"
             icon={<MdOutlineShoppingCart />}
             onClick={() => console.log("Add to cart")}
           />
@@ -129,7 +130,7 @@ const Navbar = () => {
         >
           <Icon
             size="text-2xl"
-            color="text-gray-700 group-hover:text-yellow-500"
+            color="text-gray-700 group-hover:text-blue-500"
             icon={<FaUserCircle />}
             onClick={() => console.log("Add to favorite")}
           />

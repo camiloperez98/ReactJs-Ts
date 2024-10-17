@@ -16,11 +16,15 @@ const Home = () => {
             <div className='flex 
                     justify-between 
                     pb-4
+                    mt-8
+                    mb-4
                     pl-[40px]
                     pr-[40px]'>
                 {rutes.map((rute, index) => (
                     <button key={index}
-                    className='bg-gray-100 
+                    className='bg-zinc-100
+                    hover:bg-amber-400
+                    hover:text-gray-600
                     text-black 
                     font-mono 
                     py-1 
