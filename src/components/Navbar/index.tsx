@@ -70,12 +70,14 @@ const Navbar = () => {
           className="ml-24
                     hover:text-blue-500 
                     transition-colors duration-300
+                    hover:bg-neutral-200
                     p-2
-                    rounded-full"
+                    rounded-full
+                    group"
         >
           <Icon
             size="text-2xl"
-            color="text-gray-700"
+            color="text-gray-700 group-hover:text-yellow-500"
             icon={<IoSearch />}
             onClick={toogleSearch}
           />
@@ -83,15 +85,16 @@ const Navbar = () => {
 
         <button
           className="ml-24
-                          hover:text-blue-500 
-                          transition-colors duration-300
-                          hover:bg-neutral-200
-                          p-2
-                          rounded-full"
+              hover:text-blue-500 
+              transition-colors duration-300
+              hover:bg-neutral-200
+              p-2
+              rounded-full
+              group" 
         >
           <Icon
             size="text-2xl"
-            color="text-gray-700"
+            color="text-gray-700 group-hover:text-yellow-500" 
             icon={<FaRegHeart />}
             onClick={() => console.log("Add to favorite")}
           />
@@ -104,11 +107,12 @@ const Navbar = () => {
                           duration-300
                           hover:bg-neutral-200
                           p-2
-                          rounded-full"
+                          rounded-full
+                          group"
         >
           <Icon
             size="text-2xl"
-            color="text-gray-700"
+            color="text-gray-700 group-hover:text-yellow-500"
             icon={<MdOutlineShoppingCart />}
             onClick={() => console.log("Add to cart")}
           />
@@ -120,11 +124,12 @@ const Navbar = () => {
                     transition-colors duration-300
                     hover:bg-neutral-200
                     p-2
-                    rounded-full"
+                    rounded-full
+                    group"
         >
           <Icon
             size="text-2xl"
-            color="text-gray-700"
+            color="text-gray-700 group-hover:text-yellow-500"
             icon={<FaUserCircle />}
             onClick={() => console.log("Add to favorite")}
           />
