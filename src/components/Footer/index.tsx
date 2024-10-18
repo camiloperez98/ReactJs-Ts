@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer
       className="p-6
-                      
+                 mt-[50px]    
                 drop-shadow-md 
                 bg-gradient-to-t from-white to-gray-200
                 relative

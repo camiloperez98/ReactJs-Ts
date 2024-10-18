@@ -42,7 +42,8 @@ const FilterButtons = ({ products, productsCategory, onFilter }: Props) => {
                     pb-4
                     pl-[40px]
                     pr-[40px]
-                    mt-8"
+                    mt-8
+                    "
     >
       {productsCategory.map((itemCategory) => (
         <button
